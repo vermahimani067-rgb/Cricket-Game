@@ -12,48 +12,21 @@
     <h1>Bat Ball Stump Game</h1>
     <button onclick="
     let computerChoice = generateComputerChoice();
-
     let resultMsg = getResult('Bat', computerChoice);
-    
-    alert(`You have chosen Bat. Computer choice is ${computerChoice} 
-    and ${resultMsg}`);
-
-    
+    showResult('Bat', computerChoice, resultMsg);
     ">Bat</button>
 
     <button onclick="
      computerChoice = generateComputerChoice();
-    
-     if (computerChoice === 'Ball') {
-       resultMsg = `It's a tie`;
-     } else if (computerChoice === 'Bat') {
-       resultMsg = 'Computer has won';
-     } else if (computerChoice === 'Stump') {
-       resultMsg = 'User won.';
-     }
-
-     alert(`You have chosen Ball. Computer choice is ${computerChoice} 
-     and ${resultMsg}`);
-
-    
+     resultMsg = getResult('Ball', computerChoice);
+     showResult('Ball', computerChoice, resultMsg);
     ">Ball</button>
 
 
     <button onclick="
         computerChoice = generateComputerChoice();
-        
-        if (computerChoice === 'Ball') {
-            resultMsg = 'Computer has won';
-        } else if (computerChoice === 'Bat') {
-            resultMsg = 'User won';
-        } else if (computerChoice === 'Stump') {
-            resultMsg = `It's a tie`;
-        }
-
-        alert(`You have chosen Stump. Computer choice is ${computerChoice} 
-        and ${resultMsg}`);
-
-    
+        resultMsg = getResult('Stump', computerChoice);
+        showResult('Stump', computerChoice, resultMsg);
     ">Stump</button>
 
     <script>
@@ -96,6 +69,11 @@
             return `It's a tie`;
           } 
 
+        }
+
+        function showResult(userMove, computerMove, result) {
+          alert(`You have chosen ${userMove}. Computer choice is ${computerMove} 
+        and ${result}`);
         }
       }
     </script>
