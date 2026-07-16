@@ -91,7 +91,7 @@
       }  
 
       function showResult(userMove, computerMove, result) {
-        //console.log(score);
+        localStorage.setItem('Score', JSON.stringify(score));
         alert(`You have chosen ${userMove}. Computer 
         choice is ${computerMove} 
 
