@@ -1,0 +1,27 @@
+
+body {
+    text-align: center;
+    background-color: beige; 
+}
+
+.choice-button {
+    height: 100px;
+    width: 100px;
+    border: none;
+    margin: 10px;
+    background-color: rgb(164, 212, 130);
+    border-radius: 50px;
+    cursor: pointer;
+}
+.choice-image {
+    height: 75px;
+}
+
+.reset {
+    height: 50px;
+    width: 100px;
+    background-color: cornflowerblue;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+}
